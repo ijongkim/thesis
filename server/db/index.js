@@ -4,6 +4,8 @@ const options = {
   promiseLib: promise
 }
 const pgp = require('pg-promise')(options)
-const db = pgp(project.db)
+const db = pgp(project)
+
+console.log(`Connecting to: ${project}`)
 
 module.exports = db
